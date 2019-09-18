@@ -1,7 +1,11 @@
-# mango
+# Signup UI
 
-A new Flutter project.
+A minimal Signup UI.
 
+# Screenshot
+<div>
+<img src="https://github.com/s4nk37/Signup-Minimal-Flutter/blob/master/ss.png" height="500px" width="250px">
+</div>
 ## Getting Started
 
 This project is a starting point for a Flutter application.
