@@ -1,6 +1,6 @@
-# Signup UI
+# Signup/Login UI
 
-A minimal Signup UI.
+A minimal Signup/login UI.
 
 # Screenshot
 <div>
