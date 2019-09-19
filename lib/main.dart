@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'login.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -49,9 +50,17 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: <Widget>[
           new Padding(
             padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
-            child: new Text(
-              "Log In",
-              style: new TextStyle(color: Colors.grey, fontSize: 17),
+            child: new FlatButton(
+              child: new Text("Log In",
+              style: new TextStyle(color: Colors.grey, fontSize: 17),),
+              onPressed: (){
+                Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SecondRoute()),
+  );
+              },
+              highlightColor: Colors.black,
+              shape: StadiumBorder(),
             ),
           ),
         ],
