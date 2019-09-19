@@ -26,6 +26,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool eye = true;
+
+  void _toggle() {
+    setState(() {
+      eye = !eye;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -34,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
         statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: Colors.white,
+      resizeToAvoidBottomPadding: true,
       appBar: new AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -51,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: new Container(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
           child: new Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               new Text(
@@ -86,11 +94,16 @@ class _HomeScreenState extends State<HomeScreen> {
               new TextField(
                 keyboardType: TextInputType.text,
                 autocorrect: false,
-                obscureText: true,
                 decoration: new InputDecoration(
-                  // hintText: "Email",
                   labelText: "Password",
+                  suffixIcon: new GestureDetector(
+                    child: new Icon(
+                      Icons.remove_red_eye,
+                    ),
+                    onTap: _toggle,
+                  ),
                 ),
+                obscureText: eye,
               ),
               new SizedBox(
                 height: 30,
@@ -124,7 +137,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new Icon(FontAwesomeIcons.facebookF,size: 20,),
+                          new Icon(
+                            FontAwesomeIcons.facebookF,
+                            size: 20,
+                          ),
                           new SizedBox(
                             width: 5,
                           ),
@@ -148,7 +164,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new Icon(FontAwesomeIcons.twitter,size: 20,),
+                          new Icon(
+                            FontAwesomeIcons.twitter,
+                            size: 20,
+                          ),
                           new SizedBox(
                             width: 5,
                           ),
@@ -189,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                           )),
-                      onTap: () {})
+                      onTap: () {}),
                 ],
               ),
             ],
