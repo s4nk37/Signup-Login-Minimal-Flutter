@@ -4,7 +4,8 @@ A minimal Signup UI.
 
 # Screenshot
 <div>
-<img src="https://github.com/s4nk37/Signup-Minimal-Flutter/blob/master/ss.png" height="500px" width="250px">
+<img src="https://github.com/s4nk37/Signup-Minimal-Flutter/blob/master/signup.png" height="500px" width="250px">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/s4nk37/Signup-Minimal-Flutter/blob/master/login.png" height="500px" width="250px">
 </div>
 ## Getting Started
 
