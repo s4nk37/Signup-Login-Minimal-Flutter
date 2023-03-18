@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Login",
-      theme: new ThemeData(
+      theme:  ThemeData(
         primaryColor: Colors.grey,
       ),
       home: HomeScreen(),
@@ -44,15 +44,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: true,
-      appBar: new AppBar(
+      appBar:  AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: <Widget>[
-          new Padding(
+           Padding(
             padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
-            child: new FlatButton(
-              child: new Text("Log In",
-              style: new TextStyle(color: Colors.grey, fontSize: 17),),
+            child:  FlatButton(
+              child:  Text("Log In",
+              style:  TextStyle(color: Colors.grey, fontSize: 17),),
               onPressed: (){
                 Navigator.push(
     context,
@@ -65,48 +65,48 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: new SingleChildScrollView(
-        child: new Container(
+      body:  SingleChildScrollView(
+        child:  Container(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: new Column(
+          child:  Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              new Text(
+               Text(
                 "Sign up",
-                style: new TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                style:  TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
               ),
-              new SizedBox(
+               SizedBox(
                 height: 70,
               ),
-              new TextField(
+               TextField(
                 keyboardType: TextInputType.emailAddress,
                 autocorrect: false,
-                decoration: new InputDecoration(
+                decoration:  InputDecoration(
                   // hintText: "Email",
                   labelText: "Email",
                 ),
               ),
-              new SizedBox(
+               SizedBox(
                 height: 30,
               ),
-              new TextField(
+               TextField(
                 keyboardType: TextInputType.text,
                 autocorrect: false,
-                decoration: new InputDecoration(
+                decoration:  InputDecoration(
                   // hintText: "Email",
                   labelText: "Name",
                 ),
               ),
-              new SizedBox(
+               SizedBox(
                 height: 30,
               ),
-              new TextField(
+               TextField(
                 keyboardType: TextInputType.text,
                 autocorrect: false,
-                decoration: new InputDecoration(
+                decoration:  InputDecoration(
                   labelText: "Password",
-                  suffixIcon: new GestureDetector(
-                    child: new Icon(
+                  suffixIcon:  GestureDetector(
+                    child:  Icon(
                       Icons.remove_red_eye,
                     ),
                     onTap: _toggle,
@@ -114,14 +114,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 obscureText: eye,
               ),
-              new SizedBox(
+               SizedBox(
                 height: 30,
               ),
-              new SizedBox(
+               SizedBox(
                 height: 50,
-                child: new RaisedButton(
-                  child: new Text("Sign up",
-                      style: new TextStyle(color: Colors.white)),
+                child:  RaisedButton(
+                  child:  Text("Sign up",
+                      style:  TextStyle(color: Colors.white)),
                   color: Colors.black,
                   elevation: 15.0,
                   shape: StadiumBorder(),
@@ -129,32 +129,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {},
                 ),
               ),
-              new Container(
+               Container(
                 padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
-                child: new Text(
+                child:  Text(
                   "Or sign up with social account",
                   textAlign: TextAlign.center,
                 ),
               ),
-              new Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new SizedBox(
+                   SizedBox(
                     height: 50,
                     width: 165,
-                    child: new OutlineButton(
-                      child: new Row(
+                    child:  OutlineButton(
+                      child:  Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new Icon(
+                           Icon(
                             FontAwesomeIcons.facebookF,
                             size: 20,
                           ),
-                          new SizedBox(
+                           SizedBox(
                             width: 5,
                           ),
-                          new Text("Facebook",
-                              style: new TextStyle(color: Colors.black)),
+                           Text("Facebook",
+                              style:  TextStyle(color: Colors.black)),
                         ],
                       ),
                       shape: StadiumBorder(),
@@ -163,25 +163,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       onPressed: () {},
                     ),
                   ),
-                  new SizedBox(
+                   SizedBox(
                     width: 20,
                   ),
-                  new SizedBox(
+                   SizedBox(
                     height: 50,
                     width: 165,
-                    child: new OutlineButton(
-                      child: new Row(
+                    child:  OutlineButton(
+                      child:  Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new Icon(
+                           Icon(
                             FontAwesomeIcons.twitter,
                             size: 20,
                           ),
-                          new SizedBox(
+                           SizedBox(
                             width: 5,
                           ),
-                          new Text("Twitter",
-                              style: new TextStyle(color: Colors.black)),
+                           Text("Twitter",
+                              style:  TextStyle(color: Colors.black)),
                         ],
                       ),
                       shape: StadiumBorder(),
@@ -192,12 +192,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              new SizedBox(height: 60),
-              new Row(
+               SizedBox(height: 60),
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Text("By signing up you agree to our "),
-                  new GestureDetector(
+                   Text("By signing up you agree to our "),
+                   GestureDetector(
                       child: Text("Terms of Use",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
@@ -205,14 +205,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {})
                 ],
               ),
-              new SizedBox(
+               SizedBox(
                 height: 5,
               ),
-              new Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Text("and "),
-                  new GestureDetector(
+                   Text("and "),
+                   GestureDetector(
                       child: Text("Privacy Policy",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
